@@ -1,8 +1,8 @@
 import React from "react";
-import { Github, Linkedin, Mail, ArrowDown, Download} from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 
 import amanPhoto from "../Images/aman_photo.jpg";
-import amanResume from "../Images/Aman_resume_line.pdf"
+import amanResume from "../Images/Aman_resume_line.pdf";
 
 const Hero = () => {
   return (
@@ -11,21 +11,23 @@ const Hero = () => {
       className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-indigo-50 to-white"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Left Section - Text Content */}
+          <div className="md:w-1/2 text-center md:text-left mb-10 sm:mb-16 md:mb-0">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
               Hi, I'm <span className="text-indigo-600">Aman</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-gray-600 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-600 mb-6">
               Software Engineer
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-lg">
+            <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
               I build exceptional digital experiences with clean, efficient
               code. Passionate about creating innovative solutions to complex
               problems.
             </p>
 
-            <div className="flex space-x-4 mb-8">
+            {/* Buttons - Fixed Wrapping Issue */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
               <a
                 href="tel:+919369094498"
                 className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
@@ -45,7 +47,8 @@ const Hero = () => {
                 Blogs
               </a>
               <a
-                href={amanResume} download = "Aman_Resume"
+                href={amanResume}
+                download="Aman_Resume"
                 className="px-6 py-3 border border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-colors flex items-center gap-2"
               >
                 Resume
@@ -53,7 +56,8 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="flex space-x-4">
+            {/* Social Media Links */}
+            <div className="flex justify-center md:justify-start space-x-4">
               <a
                 href="https://github.com/Bhaskar0320"
                 target="_blank"
@@ -79,9 +83,10 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Right Section - Profile Image */}
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img
                   src={amanPhoto}
                   alt="Profile"
@@ -95,6 +100,7 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Down Arrow for Scroll */}
         <div className="flex justify-center mt-16">
           <a href="#about" className="animate-bounce">
             <ArrowDown className="h-8 w-8 text-indigo-600" />
