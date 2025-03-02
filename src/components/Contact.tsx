@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -31,7 +29,7 @@ const Contact = () => {
 
   //   const serviceID = "service_51mn5jp";
   //   const templateID = "template_1dxc2pj";
-  //   const publicKey = "1UMpvyZwJvMaeyd8Z"; 
+  //   const publicKey = "1UMpvyZwJvMaeyd8Z";
 
   //   emailjs
   //   .send(serviceID, templateID, formData, publicKey)
@@ -78,33 +76,87 @@ const Contact = () => {
   //   }, 1500);
   // };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   const serviceID = "service_51mn5jp";
+  //   const templateID = "template_1dxc2pj";
+  //   const publicKey = "1UMpvyZwJvMaeyd8Z";
+
+  //   try {
+  //     const response = await emailjs.send(
+  //       serviceID,
+  //       templateID,
+  //       {
+  //         name: formData.name,
+  //         email: formData.email,
+  //         subject: formData.subject,
+  //         message: formData.message,
+  //       },
+  //       publicKey
+  //     );
+
+  //     if (response.status === 200) {
+  //       setSubmitMessage({
+  //         type: "success",
+  //         text: "Your message has been sent successfully!",
+  //       });
+
+  //       // Reset form
+  //       setFormData({
+  //         name: "",
+  //         email: "",
+  //         subject: "",
+  //         message: "",
+  //       });
+  //     }
+  //   } catch (error) {
+  //     setSubmitMessage({
+  //       type: "error",
+  //       text: "Failed to send message. Please try again later.",
+  //     });
+  //   } finally {
+  //     setIsSubmitting(false);
+  //     setTimeout(() => setSubmitMessage(null), 5000);
+  //   }
+
+  //   console.log("Sending email with data:", {
+  //     from_name: formData.name,
+  //     from_email: formData.email,
+  //     subject: formData.subject,
+  //     message: formData.message,
+  //   });
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
+
     const serviceID = "service_51mn5jp";
     const templateID = "template_1dxc2pj";
-    const publicKey = "1UMpvyZwJvMaeyd8Z"; 
-  
+    const publicKey = "1UMpvyZwJvMaeyd8Z";
+
     try {
       const response = await emailjs.send(
         serviceID,
         templateID,
         {
-          name: formData.name,
-          email: formData.email,
+          to_name: "Your Name", // Replace with the recipient's name
+          from_name: formData.name, // Sender's name
+          from_email: formData.email, // Sender's email
           subject: formData.subject,
           message: formData.message,
         },
         publicKey
       );
-  
+
       if (response.status === 200) {
         setSubmitMessage({
           type: "success",
           text: "Your message has been sent successfully!",
         });
-  
+
         // Reset form
         setFormData({
           name: "",
@@ -123,7 +175,6 @@ const Contact = () => {
       setTimeout(() => setSubmitMessage(null), 5000);
     }
   };
-
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">
