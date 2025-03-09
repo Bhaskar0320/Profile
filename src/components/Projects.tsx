@@ -7,6 +7,7 @@ import mediavers from '../Images/mediaverse.png'
 import hero from '../Images/herobg.png';
 import reduxTool from '../Images/redux_toolkit.png'
 import portfolio from '../Images/portfolio.png' 
+import devopsDash from '../Images/devops_dashboard.png'
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -34,6 +35,16 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: 'DevOps Dashboard',
+      description: 'A DevOps Dashboard provides real-time insights into CI/CD pipelines, infrastructure health, deployment status, and system performance. It helps teams monitor key metrics, detect issues, and optimize workflows for efficient software delivery.',
+      image: devopsDash,
+      technologies: ['React.Js', 'JavaScript', 'Vite', 'Tailwind CSS'],
+      category: 'frontend',
+      github: 'https://github.com/Bhaskar0320/redux-app',
+      demo: 'https://dev-ops-dashboard.vercel.app/',
+    },
+    {
+      id: 4,
       title: 'Redux App',
       description: 'A Redux app that manages global state using a centralized store, ensuring predictable state changes via actions and reducers. It improves scalability, debugging, and state consistency across components.',
       image: reduxTool,
@@ -42,7 +53,7 @@ const Projects = () => {
       github: 'https://github.com/Bhaskar0320/redux-app'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Portfolio Website',
       description: 'A responsive portfolio website showcasing projects and skills with a modern design.',
       image: portfolio,
@@ -52,7 +63,7 @@ const Projects = () => {
       demo: 'https://bhaskaramanportfolio.netlify.app/',
     },
     {
-      id: 5,
+      id: 6,
       title: 'MediaVerse',
       description: 'A responsive frontend website showcasing projects and skills with a modern design.',
       image: mediavers,
@@ -61,7 +72,7 @@ const Projects = () => {
       github: 'https://github.com/Bhaskar0320/MediaVerse',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Insta Close',
       description: 'Developed RESTful APIs for user authentication and interactive UI features. Optimized MongoDB database performance through efficient indexing and query optimization. Integrated various engineering tools and designed data layer interactions.',
       image: insta,
