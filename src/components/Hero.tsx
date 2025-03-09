@@ -2,7 +2,7 @@ import React from "react";
 import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 
 import amanPhoto from "../Images/aman_photo.jpg";
-import amanResume from "../Images/Aman_resume_line.pdf";
+import amanResume from '../Images/Resume.pdf'
 
 const Hero = () => {
   return (
