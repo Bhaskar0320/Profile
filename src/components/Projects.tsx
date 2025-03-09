@@ -68,7 +68,7 @@ const Projects = () => {
       description: 'A responsive frontend website showcasing projects and skills with a modern design.',
       image: mediavers,
       technologies: ['React','JavaScript', 'Tailwind CSS', ],
-      category: 'frontend',
+      category: 'backend',
       github: 'https://github.com/Bhaskar0320/MediaVerse',
     },
     {
